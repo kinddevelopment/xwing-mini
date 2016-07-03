@@ -22,11 +22,12 @@ package com.kinddev.xwing.engine;
  * <p>Has two properties hull and shield.
  */
 public class Health implements java.io.Serializable {
+  private static final long serialVersionUID = -5499165532329424906L;
   private int hull;
   private int shield;
 
   public Health() {
-
+    this(0, 0);
   }
 
   public Health(final int hull, final int shield) {
