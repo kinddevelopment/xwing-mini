@@ -117,5 +117,6 @@ public class HealthTest {
     Health dut = new Health(1, 1);
     assertFalse(dut.isDead());
   }
-
 }
+
+// TODO: Test serialization
