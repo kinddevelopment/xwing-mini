@@ -31,6 +31,8 @@ abstract class AbstractSecondaryWeaponShipUpgrade extends AbstractShipUpgrade {
                                                final Range fireRange) {
     super(name, description, cost, discardOnUse);
     this.firePower = firePower;
+
+    // TODO: Check range to be valid (0-3 is maximum span for range)
     this.fireRange = fireRange;
   }
 
