@@ -16,11 +16,11 @@
 
 package com.kinddev.xwing.shipupgrades;
 
-import com.kinddev.xwing.utils.Range;
+import com.kinddev.xwing.utils.FireRange;
 
 abstract class AbstractSecondaryWeaponShipUpgrade extends AbstractShipUpgrade {
   private static final long serialVersionUID = 6882907744745920053L;
-  private final Range fireRange;
+  private final FireRange fireRange;
   private final int firePower;
 
   protected AbstractSecondaryWeaponShipUpgrade(final String name,
@@ -28,7 +28,7 @@ abstract class AbstractSecondaryWeaponShipUpgrade extends AbstractShipUpgrade {
                                                final int cost,
                                                final boolean discardOnUse,
                                                final int firePower,
-                                               final Range fireRange) {
+                                               final FireRange fireRange) {
     super(name, description, cost, discardOnUse);
     this.firePower = firePower;
 
@@ -38,7 +38,7 @@ abstract class AbstractSecondaryWeaponShipUpgrade extends AbstractShipUpgrade {
 
   public abstract void use();
 
-  public Range getFireRange() {
+  public FireRange getFireRange() {
     return fireRange;
   }
 

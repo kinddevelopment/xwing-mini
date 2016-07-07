@@ -16,7 +16,7 @@
 
 package com.kinddev.xwing.shipupgrades;
 
-import com.kinddev.xwing.utils.Range;
+import com.kinddev.xwing.utils.FireRange;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -27,7 +27,7 @@ class TestableSecondaryWeaponShipUpgrade extends AbstractSecondaryWeaponShipUpgr
                                             final int cost,
                                             final boolean discardOnUse,
                                             final int firePower,
-                                            final Range fireRange) {
+                                            final FireRange fireRange) {
     super(name, description, cost, discardOnUse, firePower, fireRange);
   }
 
@@ -47,7 +47,7 @@ public class AbstractSecondaryWeaponShipUpgradeTest {
         5,
         true,
         3,
-        new Range(2, 3));
+        new FireRange(2, 3));
     assertFalse(dut.getFireRange().contains(1));
     assertTrue(dut.getFireRange().contains(2));
     assertTrue(dut.getFireRange().contains(3));
@@ -62,7 +62,7 @@ public class AbstractSecondaryWeaponShipUpgradeTest {
         5,
         true,
         3,
-        new Range(2, 3));
+        new FireRange(2, 3));
     assertEquals(3, dut.getFirePower());
   }
 
@@ -74,7 +74,7 @@ public class AbstractSecondaryWeaponShipUpgradeTest {
         7,
         true,
         3,
-        new Range(2, 3));
+        new FireRange(2, 3));
     assertEquals(7, dut.getCost());
   }
 }
